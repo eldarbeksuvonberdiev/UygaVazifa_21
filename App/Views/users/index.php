@@ -44,11 +44,15 @@ $users = User::all();
                 <td><?= $user->id ?></td>
                 <td><?= $user->name ?></td>
                 <td>
-                    <a href=""><button style="background-color: yellow;">Edit</button></a>
-                    <a href=""><button style="background-color: red;">Delete</button></a>
+                <a href="?edi_id=<?=$user->id?>" style="color: white;text-decoration:none"><button style="background-color: blue;border-radius:5px;width:70px;height:30px;margin-left:30px">Edit</button></a>
+                <a href="?del_id=<?=$user->id?>" style="color: white;text-decoration:none"><button style="background-color: red;border-radius:5px;width:70px;height:30px;margin-left:30px">Delete</button></a>
                 </td>
             </tr>
         <?php }
+        if(isset($_GET['del_id'])){
+            $id = $_GET['del_id'];
+            User::delete($id);
+        }
         // if(isset($_GET['page'])){
         //     $page = $_GET['page'];
         //     switch ($page) {

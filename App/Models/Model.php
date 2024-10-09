@@ -27,6 +27,6 @@ class Model extends Database
 
     public static function delete($id){
         $db = self::connect();
-        $stmt = $db->exec("DELETE FROM ".static::$table . " WHERE id={$id}");
+        $stmt = $db->exec("DELETE FROM ". static::$table . " WHERE id={$id}");
     }
 }
