@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-include "Model.php";
+require_once "Model.php";
 
 class User extends Model{
     public static $table = "talaba";

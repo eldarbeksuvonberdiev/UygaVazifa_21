@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-include "Model.php";
+require_once "Model.php";
 
 class Exam extends Model
 {

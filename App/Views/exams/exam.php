@@ -1,14 +1,14 @@
 <?php
+session_start();
 
 use App\Models\Subject;
 use App\Models\User;
 
-session_start();
 include "App/Models/User.php";
-// include "App/Models/Subject.php";
+include "App/Models/Subject.php";
 
 $talabalar = User::all();
-// $fanlar = Subject::all();
+$fanlar = Subject::all();
 ?>
 <!DOCTYPE html>
 <html lang="en">
